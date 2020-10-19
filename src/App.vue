@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <Header />
+    <TheHeader />
   </div>
 </template>
 
 <script>
 
-import Header from '@/components/Header.vue'
+import TheHeader from '@/components/TheHeader.vue'
 export default {
   name: 'App',
   components: {
-    Header
+    TheHeader
   }
 }
 </script>
