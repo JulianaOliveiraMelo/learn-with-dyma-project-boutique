@@ -1,10 +1,17 @@
-export <template>
-  
+<template>
+  <div>
+      <CartProductList />
+  </div>
 </template>
 
 <script>
-export default {
 
+import CartProductList from './CartProductsList';
+
+export default {
+    components: {
+        CartProductList
+    }
 }
 </script>
 

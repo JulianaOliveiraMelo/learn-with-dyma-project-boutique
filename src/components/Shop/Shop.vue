@@ -1,13 +1,19 @@
-export <template>
-  
+<template>
+    <div>
+        <ShopProductsList class="p-3"></ShopProductsList>
+    </div>  
 </template>
 
 <script>
-export default {
+import ShopProductsList from './ShopProductsList.vue';
 
+export default {
+    components: {
+        ShopProductsList,
+    }
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

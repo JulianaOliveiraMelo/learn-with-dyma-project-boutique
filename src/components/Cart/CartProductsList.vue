@@ -1,10 +1,15 @@
-export <template>
-  
+<template>
+<div>
+  <CartProductsItem />
+</div>
 </template>
 
 <script>
+import CartProductsItem from './CartProductsItem'
 export default {
-
+ components : {
+     CartProductsItem,
+ }
 }
 </script>
 

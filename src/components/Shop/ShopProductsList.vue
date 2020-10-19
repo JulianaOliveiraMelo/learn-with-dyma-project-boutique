@@ -1,10 +1,26 @@
-export <template>
-  
+<template>
+  <div class="d-flex flex-row flex-wrap">
+      <ShopProductsItem />
+      <ShopProductsItem />
+      <ShopProductsItem />
+      <ShopProductsItem />
+      <ShopProductsItem />
+      <ShopProductsItem />
+      <ShopProductsItem />
+      <ShopProductsItem />
+      <ShopProductsItem />
+      <ShopProductsItem />
+      <ShopProductsItem />
+  </div>
 </template>
 
 <script>
-export default {
 
+import ShopProductsItem from './ShopProductsItem';
+export default {
+    components: {
+        ShopProductsItem,
+    }
 }
 </script>
 
