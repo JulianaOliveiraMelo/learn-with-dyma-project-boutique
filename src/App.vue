@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <TheHeader />
-    <div class="d-flex flex-row">
-      <Shop class="w-75" />
-      <Cart class="w-25" />
+    <div class="d-flex flex-row justify-content-center">
+      <Shop class="w-65" />
+      <Cart class="w-35" />
     </div>
       <Footer class="w-100" />
   </div>
