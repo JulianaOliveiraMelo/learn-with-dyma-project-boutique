@@ -1,10 +1,18 @@
 import Vue from 'vue'
 import App from './App.vue'
+import BootstrapVue from 'bootstrap-vue'
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+Vue.use(BootstrapVue)
 
 Vue.config.productionTip = false
 
 export const eventBus = new Vue({
+  
   data: {
+    
+   
     products: [{
       id: '1',
       img: 'https://c2.lestechnophiles.com/images.frandroid.com/wp-content/uploads/2020/03/apple-macbook-air-2020-frandroid.png?resize=580,580',
@@ -48,6 +56,7 @@ export const eventBus = new Vue({
         price: 809
       }],
     cart: [],
+    appVersion: '3.2',
 
   },
   methods: {

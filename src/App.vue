@@ -16,13 +16,15 @@ import Cart from '@/components/Cart/Cart.vue';
 import Shop from '@/components/Shop/Shop.vue';
 import Footer from '@/components/Footer/TheFooter.vue';
 export default {
+ 
   name: 'App',
   components: {
     TheHeader,
     Cart,
     Shop,
     Footer,
-  }
+    
+  },
 }
 </script>
 
