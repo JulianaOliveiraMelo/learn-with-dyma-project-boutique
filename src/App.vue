@@ -1,31 +1,41 @@
 <template>
   <div id="app">
     <TheHeader />
-    <User />
-    <Admin />
+    <div class="d-flex flex-column w-100">
+      <component :is="page"></component>
+    </div>
+    
       <Footer class="w-100" />
   </div>
 </template>
 
 <script>
 
-import TheHeader from '@/components/TheHeader.vue';
-// import Cart from '@/components/features/User/Cart/Cart.vue';
-// import Shop from '@/components/features/User/Shop/Shop.vue';
-import Footer from '@/components/Footer/TheFooter.vue';
-import User from './components/features/User/User.vue';
-import Admin from './components/features/Admin/Admin.vue';
+import TheHeader from '@/components/TheHeader';
+// import Cart from '@/components/features/User/Cart/Cart';
+// import Shop from '@/components/features/User/Shop/Shop';
+import Footer from '@/components/Footer/TheFooter';
+import User from './components/features/User/User';
+import Admin from './components/features/Admin/Admin';
+import { eventBus } from './main';
 export default {
  
   name: 'App',
   components: {
     TheHeader,
-    // Cart,
-    // Shop,
     Footer,
     User,
     Admin,
-    
+  },
+  data(){
+    return {
+      page: eventBus.page,
+    }
+  },
+  created(){
+    eventBus.$on('update:page', (page)=> {
+      this.page = page;
+    })
   },
 }
 </script>

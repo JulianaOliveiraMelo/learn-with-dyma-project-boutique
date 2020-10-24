@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import ShopProductsList from './ShopProductsList.vue';
-import { eventBus } from '../../../../main.js'
+import ShopProductsList from './ShopProductsList';
+import { eventBus } from '../../../../main'
 export default {
     data(){
         return {
