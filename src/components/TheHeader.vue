@@ -1,14 +1,15 @@
 <template>
     <div>
+        <transition name="navTop" appear>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" >
                 <img src="../assets/logo.png" alt="">
                 Dyma
             </a>
             <button class="navbar-toggler">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon" v-trigger-collapse="'collapseMenu'" ></span>
             </button>
-            <div class="collapse navbar-collapse">
+            <div id="collapseMenu" class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" :class="{ active: page === 'User'}" @click="changePage('User')">Boutique</a>
@@ -19,6 +20,7 @@
                 </ul>
             </div>
         </nav>
+        </transition>
     </div>
 </template>
 
@@ -41,6 +43,24 @@ export default {
         eventBus.$on('update:page', (page) => {
             this.page = page
             })
+    },
+    directives: {
+        triggerCollapse: {
+            inserted(el, binding){
+                const nav = document.querySelector('#' + binding.value);
+                window.addEventListener('click', () => {
+                    nav.classList.remove('show')
+                })
+                el.addEventListener('click', (event) => {
+                    if(nav.classList.contains('show')){
+                        nav.classList.remove('show');
+                    }else {
+                        nav.classList.add('show')
+                    }
+                    event.stopPropagation();
+                })
+            }
+        }
     }
 }
 </script>
@@ -53,6 +73,23 @@ nav>a>img {
 
 a {
     cursor: pointer;
+}
+
+.navTop-enter-active{
+    opacity: 0;
+    animation: fromTop 2s ease-out;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-250px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
 }
 
 

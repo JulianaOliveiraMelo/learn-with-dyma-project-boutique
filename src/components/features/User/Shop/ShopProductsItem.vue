@@ -11,7 +11,7 @@
         </div>
         <hr />
         <div class="mt-auto">
-          <span>{{ product.price }}€</span>
+          <span>{{ product.price | price }}</span>
           <button @click="addProductToCart" class="btn btn-primary btn-sm float-right">Buy</button>
         </div>
   </div>

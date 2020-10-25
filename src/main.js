@@ -1,12 +1,16 @@
 import Vue from 'vue'
 import App from './App.vue'
 import BootstrapVue from 'bootstrap-vue'
-
+import * as Filters from './utils/filters' // import price as a filter in products prices
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue)
 
 Vue.config.productionTip = false
+
+Object.keys(Filters).forEach((functionName) => {
+  Vue.filter(functionName, Filters[functionName])
+})
 
 export const eventBus = new Vue({
   
@@ -56,7 +60,7 @@ export const eventBus = new Vue({
         price: 809
       }],
     cart: [],
-    page: 'Admin',
+    page: 'User',
 
   },
   methods: {

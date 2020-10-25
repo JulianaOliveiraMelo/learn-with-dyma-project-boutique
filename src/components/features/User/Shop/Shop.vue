@@ -2,7 +2,7 @@
 
     <div>
         <ShopProductsList class="p-3" :products="products"></ShopProductsList>
-    </div>  
+    </div>
 
 </template>
 
@@ -17,7 +17,7 @@ export default {
     },
     components: {
         ShopProductsList,
-       
+
     },
     created(){
         this.products = eventBus.products;
