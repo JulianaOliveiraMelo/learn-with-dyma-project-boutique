@@ -1,11 +1,9 @@
 <template>
   <div class="d-flex flex-row">
-      <transition name="left" appear>
+      
       <Shop class="w-75"></shop>
-      </transition>
-      <transition name="right" appear>
+      
       <Cart class="w-25"></cart>
-      </transition>
   </div>
 </template>
 

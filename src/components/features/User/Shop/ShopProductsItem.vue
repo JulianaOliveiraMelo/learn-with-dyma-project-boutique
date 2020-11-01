@@ -1,7 +1,7 @@
 <template>
   <div class="p-3 border product-container d-flex flex-column flex-wrap" >
         <div class="mb-auto" style="text-align: center">
-          <img style="object-fit: scale-down; width:100%; max-height:150px;" :src="product.img">
+          <img style="object-fit: scale-down; width:100%; max-height:150px;" :src="product.image">
         </div>
         <div>
           <h3>{{ product.title }}</h3>

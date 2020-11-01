@@ -46,7 +46,7 @@ export default {
         console.log({...this.form})
         eventBus.addProduct({...this.form});
         this.resetForm();
-        eventBus.changePage('User');
+        this.$router.pus('/shop')
       }
     },
     resetForm(){
