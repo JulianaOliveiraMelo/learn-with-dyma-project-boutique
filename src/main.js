@@ -8,7 +8,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Axios from 'axios'
 //import dotEnv from 'dotenv'
 Vue.use(BootstrapVue)
-Axios.defaults.baseURL = 'https://http-vue-d2068.firebaseio.com/' //process.env.VUE_APP_FIRE_BASE_ROUTE
+Axios.defaults.baseURL = process.env.VUE_APP_FIRE_BASE_ROUTE
 Vue.prototype.$http = Axios
 Vue.config.productionTip = false
 
